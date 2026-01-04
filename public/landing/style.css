@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Theme toggle button */
+.btn-theme {
+  margin-left: 16px;
+  padding: 6px 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+/* User menu dropdown */
+.user-menu { position: relative; display: inline-block; }
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+  z-index: 40;
+  display: none;
+}
+.user-dropdown .user-item {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #111;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+.user-dropdown .user-item:hover { background: #f3f3f3; }
+
+body.dark .user-dropdown { background: #121212; border-color: rgba(255,255,255,0.06); }
+body.dark .user-dropdown .user-item { color: #eaeaea; }
+body.dark .user-dropdown .user-item:hover { background: rgba(255,255,255,0.03); }
+
+/* Dark theme overrides when body has .dark */
+body.dark {
+  background: #0b0b0b;
+  color: #eaeaea;
+}
+
+body.dark .navbar {
+  border-bottom: 1px solid #222;
+}
+
+body.dark .navbar a { color: #e6e6e6; }
+body.dark .card { border-color: rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); }
+body.dark .card h3, body.dark .card p { color: #ddd; }
+body.dark .footer { color: #bbb; }
+body.dark .cta-button { border-color: #e6e6e6; }
+body.dark .cta-button:hover { background: #e6e6e6; color:#111; }
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 60px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 60px;
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #555;
+}
+
+.cta-button {
+  display:inline-block;
+  padding: 14px 32px;
+  border: 2px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 60px;
+}
+
+.card {
+  border: 1px solid #000;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #eee;
+  color: #777;
+}
